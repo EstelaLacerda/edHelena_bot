@@ -5,4 +5,10 @@ edehelenabot = TeleBot(TOKEN_EDHELENA)
 
 @edehelenabot.message_handler(commands=['start','começar'])
 def boas_vindas(message):
-    edehelenabot.reply_to(message, "Olá, eu sou um bot criado por Estela de Lacerda Oliveira. Estou aqui pra te auxiliar a apr")
+    edehelenabot.reply_to(message, "Olá, eu sou um bot criado por Estela de Lacerda Oliveira. Estou aqui pra te auxiliar")
+
+@edehelenabot.message_handler(func = lambda msg: true)
+def echo_All(message):
+    edehelenabot.reply_to(message. message.text)
+
+edehelenabot.infinity_polling()
